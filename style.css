@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 25px;
+    background-color: black;
+}
+
+.container {
+    border: 1px solid #005025f6;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    padding: 10px;
+    height: max-content;
+
+}
+
+/* .container:nth-child(1) {
+    border: 2px dotted blue;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+} */
+
+.beforegame {
+    height: max-content;
+    border: 2px solid blue;
+    display: block;
+    font-size: 20px;
+}
+
+button {
+    margin-left: 50px;
+}
+
+#chooseGameTypeBtn {
+    vertical-align: bottom;
+    font-size: 15px;
+}
+
+.moveOption {
+    border-radius: 100%;
+    border: 3px solid #fff;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-left: 25px;
+    padding: 20px;
+    font-size: 100px;
+    cursor: pointer;
+    display: flex
+}
+
+.moveOption:hover {
+    font-size: 120px;
+}
+
+.moveOption.selected {
+    background: rgba(0, 0, 255, 0.342);
+}
+
+#endTurn {
+    width: 150px;
+    height: 75px;
+    font-size: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    padding: 0 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+#startGameBtn {
+    font-size: 15px;
+}
+
+.p1name {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 20px
+}
+
+.p2name {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px
+}
+
+.playermove {
+    border-radius: 100%;
+    border: 3px solid #fff;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px;
+    font-size: 100px;
+}
+
+.results {
+    justify-content: center;
+    align-items: center;
+    font-size: 40pxa
+}
+
+
+.playernames {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: left;
+    align-items: left;
+    align-content: left;
+}
+
+input {
+    max-width: 200px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+#Player1Name {
+    font-size: 15px;
+}
+
+#Player2Name {
+    font-size: 15px;
+}
+
+.palyermove {
+    cursor: default;
+}
+
+#roundwinner {
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 20px;
+}
