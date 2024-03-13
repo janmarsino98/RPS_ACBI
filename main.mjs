@@ -9,6 +9,7 @@ import { Game } from "./game.mjs"
 let game = new Game();
 let player1
 let player2
+let choices = ["✊", "🖐️", "✌️"]
 
 
 //Choose between one player game or 2 player games
@@ -49,7 +50,7 @@ chooseGameTypeBtn.addEventListener("click", function () {
         player1 = new Player(player1NameInput.value)
         game.setPlayer1(player1)
         if (game.type === "1player") {
-            player2 = new Computer()
+            player2 = new Player("Computer")
 
         } else {
             player2 = new Player(player2NameInput.value)
@@ -78,20 +79,27 @@ endTurnBtn.addEventListener("click", function () {
     document.getElementById("roundwinner").removeAttribute("roundwinner")
     let playerOptions = document.getElementsByClassName("moveOption")
     if (game.type === "1player") {
-        for (let i = 0; i < playerOptions.length; i++) {
-            if (playerOptions[i].className.includes("selected")) {
-                player1.choice = playerOptions[i].textContent
-            }
-        }
+        player1.choice = get_current_choice()
+        // for (let i = 0; i < playerOptions.length; i++) {
+        //     if (playerOptions[i].className.includes("selected")) {
+        //         player1.choice = playerOptions[i].textContent
+        //     }
+        // }
+        player2.choice = choices[Math.floor(Math.random() * 3)]
+        console.log(player2.choice)
         document.getElementById("player1move").textContent = player1.choice
+        document.getElementById("player2move").textContent = player2.choice
         turnEnd()
     } else {
         if (game.type === "1player") {
-            for (let i = 0; i < playerOptions.length; i++) {
-                if (playerOptions[i].className.includes("selected")) {
-                    player1.choice = playerOptions[i].textContent
-                }
-            }
+            console.log("The type of game is 1 player")
+
+            // for (let i = 0; i < playerOptions.length; i++) {
+            //     if (playerOptions[i].className.includes("selected")) {
+            //         player1.choice = playerOptions[i].textContent
+            //     }
+            // }
+
 
         } else {
             let p1picktitleDiv = document.getElementById("p1picktitle")
